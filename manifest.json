@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "ChatGPT Chat Downloader",
+    "version": "1.0",
+    "description": "Download ChatGPT conversations as text files.",
+    "permissions": ["scripting", "downloads", "activeTab"],
+    "host_permissions": ["https://chat.openai.com/*"],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
+      }
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://chat.openai.com/*"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
